@@ -3,10 +3,10 @@
 	"version": "0.0.1",
 	"description": "A sample nodejs app for Bluemix",
 	"scripts": {
-		"start": "node testAgent.js"
+		"start": "node --max-old-space-size=600 testAgent.js"
 	},
 	"dependencies": {
-		"autoscalingagent": "1.0.16"
+		"autoscalingagent": "file:node_modules/autoscalingagent"
 	},
 	"repository": {},
 	"engines": {
