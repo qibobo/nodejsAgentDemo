@@ -8,7 +8,7 @@ var initTime = new Date().getTime();
 var http = require('http');
 function sort(){
 	var a = new Array();
-	var count = 30000;
+	var count = 10000;
 	var num = new Date().getTime();
 	for(var j = 0; j < count; j++){
 		a.push(num++);
@@ -31,6 +31,8 @@ var server = http.createServer(function handler(req, res) {
 //	console.log("init time:" + initTime);
 //	console.log("duration:" + duration + ", current requestCount:" + requestCount + ",current throughput :" + throughput);
 	var params = url.parse(req.url, true).query;
+	var randomParam = params.param;
+	console.log('request ' + randomParam + 'will start');
 	var cmd = params.cmd;
 	if('print' == cmd){
 		var time = params.time;
@@ -103,6 +105,7 @@ var server = http.createServer(function handler(req, res) {
 		sort();
 		//console.log('rest remove, after removing the size of array is ' + arr.length);
 	}
+	console.log('request ' + randomParam + 'is end');
 	res.end('the length of array is ' + arr.length );
 }).listen(process.env.PORT || 3000);
 

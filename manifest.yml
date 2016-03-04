@@ -1,8 +1,8 @@
 applications:
 - path: .
-  memory: 656M
+  memory: 600M
   instances: 1
   domain: stage1.mybluemix.net
-  name: qiynode
-  host: qiynode
+  name: nodedemoapp
+  host: nodedemoapp
   disk_quota: 1024M

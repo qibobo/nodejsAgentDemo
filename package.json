@@ -6,7 +6,7 @@
 		"start": "node --max-old-space-size=600 testAgent.js"
 	},
 	"dependencies": {
-		"autoscalingagent": "file:node_modules/autoscalingagent"
+		"autoscalingagent": "file:node_modulesxx/autoscalingagent"
 	},
 	"repository": {},
 	"engines": {
