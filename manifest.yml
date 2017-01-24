@@ -1,8 +1,10 @@
 applications:
 - path: .
-  memory: 600M
+  memory: 512M
   instances: 1
   domain: stage1.mybluemix.net
-  name: nodedemoapp
-  host: nodedemoapp
+  name: nodejsAgentDemo
+  host: nodejsAgentDemo
   disk_quota: 1024M
+  services:
+   - diego-s
